@@ -8,11 +8,12 @@ function cmp($a, $b)
 }
 if (!empty($_POST['text1'])) {
     $text1 = ($_POST['text1']);
+    $text1 =preg_replace ('/[^a-zа-яё\040]+/iu',"\040",$text1);
     $text1 = explode(" ", $text1);
     usort($text1, "cmp");
     $result = array_slice($text1, 0, 3);
     $result = implode(" ",$result);
-    echo "$result";
+    echo "Топ3 самых длинных слова:\040$result";
 }
 else {
         echo "Пожалуйста введите текст в форму";
