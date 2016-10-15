@@ -11,12 +11,12 @@
     <input type="submit" name="button" value="Отправить">
 </form>
 <?php
-function rewrite($c) {
-    if (empty($_POST)){
+
+    if (empty($_POST)) {
         die ("PLS TYPE NUMBER");
-    } else {
-        intval($_POST['lentgh']);
     }
+    else {}
+function rewrite($c) {
 $text1=file_get_contents("./$c");
 $text2=preg_replace('/[^\w\040]+/ui',"\040",$text1);
 $array1= explode(" ",$text2);
@@ -28,7 +28,7 @@ $result=preg_replace ($badWords,"\040",$text1);
 echo "Отредактированный текст cо словами меньше {$_POST['lentgh']}: <br> $result";
 }
 function cbck($a){
-    $b=($_POST['lentgh']);
+    $b=intval($_POST['lentgh']);
     if (mb_strlen($a) >= $b) {
         return 1;
     } else {
