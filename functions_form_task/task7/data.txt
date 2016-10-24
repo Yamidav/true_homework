@@ -1,1 +1,2 @@
-﻿
+a:4:{s:8:"username";s:5:"Vadim";s:5:"email";s:18:"ya-midav@yandex.ru";s:4:"date";s:16:"2016-10-24 17:15";s:4:"body";s:49:"Это мой первый комментарий";}
+a:4:{s:8:"username";s:7:"Vadim02";s:5:"email";s:14:"test@yandex.ru";s:4:"date";s:16:"2016-10-24 17:22";s:4:"body";s:64:"Этой второй комментарий<br />/<br /><br />f";}
